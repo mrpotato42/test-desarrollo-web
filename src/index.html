@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffbd67">
+    <meta name="description" content="Descubre Pop-it: juguetes sensoriales coloridos para jugar y relajarse.">
+    <title>Pop-it | Juega a tu ritmo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/cart/cart.css">
+    <link rel="stylesheet" href="components/product-carousel/product-carousel.css">
+    <script src="components/cart/cart.js" defer></script>
+    <script src="components/product-carousel/product-carousel.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="#inicio" aria-label="Pausa Pop, ir al inicio">PAUSA POP</a>
+        <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Abrir menú">
+          <span class="site-header__toggle-line"></span>
+          <span class="site-header__toggle-line"></span>
+          <span class="site-header__toggle-line"></span>
+        </button>
+        <nav class="site-header__navigation" id="site-navigation" aria-label="Navegación principal">
+          <a class="site-header__link" href="#nosotros">Nosotros</a>
+          <a class="site-header__link" href="#descuentos">Productos</a>
+          <a class="site-header__link" href="#contacto">Contacto</a>
+          <shopping-cart class="cart"></shopping-cart>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <img class="hero__art" src="../public/background.png" alt="Pop-it con forma de helado y colores del arcoíris">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Un pequeño descanso para tus manos</p>
+          <h1 class="hero__title" id="hero-title">¡POP IT!</h1>
+          <p class="hero__description">El juguete antiestrés que convierte cada burbuja en un momento de calma.</p>
+          <button class="hero__button" type="button" data-product-id="helado">Lo quiero</button>
+        </div>
+      </section>
+
+      <section class="about" id="nosotros" aria-labelledby="about-title">
+        <div class="about__inner">
+          <p class="about__eyebrow">Aprieta. Escucha. Repite.</p>
+          <h2 class="about__title" id="about-title">¿Qué es un Pop-it?</h2>
+          <p class="about__text">Pop-it significa «hazlo explotar». Es un juego sensorial parecido a hacer estallar plástico de burbujas, pero sin fin: presiona las burbujas de silicona y dales la vuelta para empezar otra vez. Una pausa sencilla, colorida y muy satisfactoria.</p>
+        </div>
+      </section>
+
+      <section class="products" id="descuentos" aria-labelledby="products-title">
+        <div class="products__inner">
+          <p class="products__eyebrow">Elige tu favorito</p>
+          <h2 class="products__title" id="products-title">Un Pop-it para cada momento</h2>
+          <product-carousel
+            class="products__carousel"
+            role="region"
+            aria-roledescription="carrusel"
+            aria-label="Productos disponibles"
+          ></product-carousel>
+        </div>
+      </section>
+
+      <section class="rules" aria-labelledby="rules-title">
+        <div class="rules__inner">
+          <div class="rules__copy">
+            <p class="rules__eyebrow">Un juego para compartir</p>
+            <h2 class="rules__title" id="rules-title">Reglas del juego</h2>
+            <p class="rules__text">Por turnos, cada jugador presiona de una a tres burbujas que todavía no se hayan hundido. En cada turno, todas deben estar en la misma fila. Quien se quede con la última burbuja por presionar pierde la partida. ¡Pongan el Pop-it del otro lado y jueguen de nuevo!</p>
+          </div>
+          <img class="rules__image" src="../public/photo.jpg" alt="Una mano juega con un Pop-it cuadrado sobre una mesa azul" loading="lazy">
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="site-footer__inner">
+        <a class="site-footer__brand" href="#inicio">PAUSA POP</a>
+        <a class="site-footer__link" href="#contacto">Formas de pago</a>
+        <a class="site-footer__link" href="#contacto">Envíos</a>
+        <a class="site-footer__link" href="#nosotros">Sobre la tienda</a>
+        <a class="site-footer__link" href="mailto:hola@pausapop.example">Escríbenos</a>
+      </div>
+      <p class="site-footer__copyright">© 2026 Pausa Pop. Hecho para jugar.</p>
+    </footer>
+  </body>
+</html>
